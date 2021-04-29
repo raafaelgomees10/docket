@@ -1,0 +1,342 @@
+/* ESTILIZAÇAO GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    font-family: Open Sans, sans-serif;
+    color: #2e2d2c;
+    display: flex;
+    flex-direction: column;
+    background-color: #f3f3f3;
+}
+
+/* MENSAGEM DE SUCESSO */
+.success {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin-top: 30px;
+    margin-left: 50%;
+    background-color: #73E6CB;
+    border: 2px solid #00B98E;
+    position: fixed;
+    z-index: 1;
+    transform: translateX(-50%);
+    opacity: 0;
+  
+}
+.successIcon {
+    width: 24px;
+    height: 24px;
+}
+.successPipe {
+    width: 1px;
+    height: 40px;
+    margin: 0 16px 0;
+    background-color: #008768;
+}
+.successText {
+    color: #008768
+}
+
+
+/* BACKGROUND */
+.myContainer {
+    background-image: url(../img/background.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    width: 100%;
+    position: relative;
+}
+
+/* LOGO */
+.myLogo {
+    height: 60px;
+    margin: 40px 150px;
+    cursor: pointer;
+}
+
+/* POSICAO DOS CARDS */
+.myContent {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    margin-top: -20px;
+    margin-left: 11%;
+    margin-right: 11%;
+    margin-bottom: 20px;
+}
+/* CARD 1  */
+.card-1 {
+    width: 100%;
+    background-color: white;
+    border: 1px solid #C4C8CC;
+    border-radius: 5px;
+    margin-right: 20px;
+    padding: 30px;
+}
+@media only screen and (max-width: 1000px) {
+    .card-1 {
+        width: 37.5vw;
+        padding: 2.3vw;
+        flex-grow: 0;
+    }
+}
+
+.card-1-title {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.card-1-subtitle {
+    margin-top: 25px;
+    font-weight: 300;
+}
+.card-1-data {
+    margin-top: 35px;
+    font-weight: bold;
+    margin-bottom: 27px;
+}
+
+/* CARD 1 FORM */
+.input-required::before {
+    content: "* ";
+    color: red;
+}
+
+.input-name {
+    display: inline-block;
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px 13px;
+}
+
+.form-email{
+    margin-top:35px;
+}
+
+.input-email {
+    display: inline-block;
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px 13px;
+}
+
+form input[type=text]:focus,
+.input-email:focus {
+    border: 1px solid black;
+}
+
+.form-telefone {
+    display: inline;
+    float: left;
+    width: 100%;
+    margin-top: 35px;
+}
+
+.divTelefone {
+    width: 50%;
+    float: left;
+} 
+
+  .input-telefone {
+    margin-top: 10px;
+    width: 90%;
+    padding: 10px 13px;
+}
+
+.label-tel2{
+    margin-left: 20px;
+}
+
+.input-telefone2 {
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 90%;
+    padding: 10px 13px;
+}
+
+.text-helper{
+    font-size: 12px;
+    font-style: italic;
+    margin-left: 25px;
+    color: #2E2D2C;
+}
+
+.btnSend {
+    margin-top: 40px;
+    color: white;
+    background-color: #3570b2;
+    border: none;
+    border-radius: 100px;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    box-shadow: 0px 3px 5px #2e2d2c;
+}
+
+.btnSend:hover {
+    /* background-color:#4e7db1; */
+    background-color: #5783b3;
+}
+
+
+/* CARD 2 START */
+.card-2 {
+    width: 100%;
+    background-color: #ebf0f5;
+    border: 1px solid #C4C8CC;
+    border-radius: 5px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+@media only screen and (max-width: 1000px) {
+    .card-2 
+        {
+            width: 37.5vw;
+            padding: 2.3vw;
+            flex-grow: 0;
+    }
+}
+.card-2-line {
+    width: 100%;
+    background-color: #c4c8cc;
+    height: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.card-2-title {
+    color: #403D70;
+    margin-bottom: 25px;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+.card-2-subtitle {
+    display: block;
+    color: #ABABAB;
+    font-style: italic;
+    margin-bottom: 65%;
+}
+
+/* CARD 2 RESULTS */
+.card-2-results {
+    display: none;
+}
+.card-2-name {
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+.card-2-email,
+.card-2-telefone1,
+.card-2-telefone2 {
+    font-weight: 300;
+}
+.card-2-pResult {
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+.resultTel2{
+    margin-bottom: calc(17% + 4px);
+}
+/* CARD 2 PROJECTS */
+.card-2-projects {
+  width: 100%;
+}
+
+.card-2-projectsTitle {
+    font-size: 16px;
+    font-weight: bold;
+}
+.card-2-projectsCarousel {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-2-projectBtn {
+    width: 10px;
+    height: 40px;
+    background-color: #C4C8CC;
+    border: none;
+    cursor: pointer;
+    clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+}
+.card-2-projectBtn:last-child {
+    transform: rotate(180deg);
+}
+.card-2-projectBtn:hover {
+    background-color: #5A5789;
+}
+.card-2-projectsDivList {
+    flex-grow: 1;
+    overflow: hidden;
+    max-width: 400px;
+}
+.card-2-projectsList {
+    position: relative;
+    left: 0;
+    display: flex;
+
+}
+.card-2-listContent {
+    height: 0;
+    width: calc(100% - 20px);
+    margin: 0 10px 9px;
+    padding-bottom: 50%;
+    background-color: white;
+    display: block;
+    position: relative;
+    box-shadow: 0px 3px 6px #2E2D2C66;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+@media only screen and (min-width: 1000px) {
+    .card-2-listContent {
+        width: calc(50% - 20px);
+        padding-bottom: 30%;
+    }
+}
+.card-2-projectImages {
+    width: 100%;
+    height: 100%;
+    border: 2px solid white;
+    position: absolute;
+    opacity: 1;
+    object-fit: cover;
+}
+.card-2-projectImages:hover {
+opacity: 0.5;
+}
+
+/* FOOTER */
+.footer {
+    line-height: 62px;
+    background-image: linear-gradient(to right, #5a5789, #2d2c45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px 4px 0 0;
+}
+
+.footerText {
+    text-transform: uppercase;
+    color: white;
+}
